@@ -1,10 +1,10 @@
-# Portfolio Cyberpunk
+# Portfolio 
 
 Un portfolio moderne avec des effets WebGL et une esthétique cyberpunk, développé avec Node.js et Express.
 
 ## 🚀 Fonctionnalités
 
-- Design cyberpunk avec effets de glitch et néons
+- Design  avec effets de glitch et néons
 - Effets WebGL interactifs
 - Carrousel 3D pour la présentation des projets
 - Système de particules interactif
