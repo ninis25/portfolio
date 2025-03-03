@@ -1,0 +1,48 @@
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--neon-primary);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease;
+}
+
+.cursor-dot {
+    width: 4px;
+    height: 4px;
+    background: var(--neon-primary);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px var(--neon-primary);
+    transition: all 0.1s ease;
+}
+
+/* État hover du curseur */
+.custom-cursor.hover {
+    width: 40px;
+    height: 40px;
+    border-color: var(--neon-secondary);
+    background: rgba(255, 0, 255, 0.1);
+}
+
+.cursor-dot.hover {
+    transform: translate(-50%, -50%) scale(0);
+}
+
+/* Cacher le curseur par défaut sur les éléments interactifs */
+a, button, input, textarea, .burger-menu {
+    cursor: none !important;
+}
+
+/* Support tactile */
+@supports (pointer: coarse) {
+    .custom-cursor, .cursor-dot {
+        display: none;
+    }
+} 
