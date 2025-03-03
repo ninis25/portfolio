@@ -12,7 +12,7 @@ const __dirname = dirname(__filename);
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 3000;
 
 // Log de démarrage avec configuration
 console.log('Configuration de l\'application...');
