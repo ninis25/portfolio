@@ -1,32 +1,22 @@
-# Configuration Fly.io pour le CV d'Anisse Fouka
-app = 'cv-anisse-fouka'
-primary_region = 'cdg'  # Paris, France
+# fly.toml app configuration file generated for portfolio-nxr55q on 2025-06-10T15:18:58Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'portfolio-nxr55q'
+primary_region = 'cdg'
 
 [build]
-
-[env]
 
 [http_service]
   internal_port = 80
   force_https = true
-  auto_stop_machines = true
+  auto_stop_machines = 'stop'
   auto_start_machines = true
   min_machines_running = 0
   processes = ['app']
 
-  [http_service.concurrency]
-    type = 'connections'
-    hard_limit = 25
-    soft_limit = 20
-
-[[http_service.checks]]
-  grace_period = '10s'
-  interval = '30s'
-  method = 'GET'
-  timeout = '5s'
-  path = '/cv.html'
-
 [[vm]]
   cpu_kind = 'shared'
   cpus = 1
-  memory_mb = 256 
+  memory_mb = 256
